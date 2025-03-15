@@ -7,10 +7,10 @@
 - [Функции сортировки даты и проверки значения](https://github.com/Umelyantsev-Vasily/HomWorc/blob/feature/homework_10_1/src/processing.py)
 ---
 ## Инструменты которые используется в проекте 
-- [flake8](https://flake8.pycqa.org/en/latest/)
-- [black](https://pypi.org/project/black/)
-- [isort](https://pycqa.github.io/isort/)
-- [mypy](https://mypy-lang.org/)
+1. [flake8](https://flake8.pycqa.org/en/latest/)
+2. [black](https://pypi.org/project/black/)
+3. [isort](https://pycqa.github.io/isort/)
+4. [mypy](https://mypy-lang.org/)
 ## Пример кода:
 ```
 def filter_by_state(list_dictionaries: List[Dict[str, Any]], state: str = "EXECUTED") -> List[Dict[str, Any]]:
