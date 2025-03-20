@@ -1,7 +1,7 @@
 from typing import Union
 
-# card_user = input("Введите номер карты: ")
-# account_numbers = input("Введите номер счета: ")
+# card_user = "7000792289606361"
+# account_numbers = "73654108430135874305"
 """ Получаем данные от пользователя"""
 
 
@@ -12,7 +12,7 @@ def get_mask_card_number(card_user: Union[str]) -> Union[str]:
 
 
     string_card = str(card_user)
-    return f"{string_card[:4]} {string_card[4:7]}** **** {string_card[-4:]}"
+    return f"{string_card[:4]} {string_card[5:7]}** **** {string_card[-4:]}"
 
 
 def get_mask_account(account_numbers: Union[str]) -> Union[str]:

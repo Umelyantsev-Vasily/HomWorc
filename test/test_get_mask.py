@@ -14,23 +14,10 @@ def test_get_mask_card_number(number, expected_result):
     assert get_mask_card_number(number) == expected_result
 
 
-def test_get_mask_card_count_number_(number_card):
-    assert get_mask_card_number(number_card) == "1234 567** **** 5678"
-
-
-def test_get_mask_card_count_number_2(number_count):
+@pytest.mark.parametrize(
+    "number, expected",
+    [("12345678123456789", ValueError), ("1234", ValueError), ("card", ValueError), ("", ValueError)],
+)
+def test_get_mask_card_error(number, expected):
     with pytest.raises(ValueError):
-        assert get_mask_card_number(number_count)
-
-def test_get_mask_card_count_number_2(number_count):
-    with pytest.raises(ValueError):
-        assert get_mask_card_number("1234")
-
-
-def test_get_mask_card_str(str_card):
-    with pytest.raises(ValueError):
-        assert get_mask_card_number(str_card)
-
-def test_get_mask_card_zero():
-    with pytest.raises(ValueError):
-        assert get_mask_card_number("")
+        assert get_mask_card_number(number) == expected

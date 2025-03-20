@@ -1,26 +1,37 @@
-from masks import get_mask_account, get_mask_card_number
+from src.masks import get_mask_account, get_mask_card_number
 
 
-def mask_account_card(number_name: str) -> tuple[str, str]:
+def mask_account_card(number_name: str) -> str:
     """Функция которая маскирует карту и счет"""
     title_num = ""
     title_name = ""
     for element in number_name:
         if element.isdigit():  # Проверяем есть ли в строке числа
             title_num += element  # Добавляем числа в переменную номер
-        else:
-            title_name += element  # Если это не числа то добавляем строку во вторую переменную имя
-    return title_name, title_num
+        elif element.isalpha() or element.isspace():
+            title_name += element  # Если этo буквы то добавляем строку во вторую переменную имя
+    strip_title_name = title_name.strip()
+    if len(title_num) == 16:  # Проверяем колличество цифр в строке
+        title_num = get_mask_card_number(title_num)
+    elif len(title_num) == 20:
+        title_num = get_mask_account(title_num)
+    else:
+        raise ValueError("Неправильный ввод")
+    title_mask = str(title_name) + str(title_num)
+    return title_mask
 
 
 test = "Visa Platinum 7000792289606361"
+print(mask_account_card(test))
 # test_2 = "Счет 73654108430135874305"
-name, num = mask_account_card(test)
-if len(num) <= 16:  # Проверяем колличество цифр в строке
-    new_mask = get_mask_card_number(num)  # Применяем функцию для маски карты
-else:
-    new_mask = get_mask_account(num)  # Применяем функцию для маски счета
-print(f"{name}{new_mask}")
+#name, num = mask_account_card(test)
+#if len(num) == 16:  # Проверяем колличество цифр в строке
+#    new_mask = get_mask_card_number(num)
+#elif len(num) == 20:
+#   new_mask = get_mask_account(num)
+#else:
+#    raise ValueError("Неправильный ввод")
+# print(f"{name}{new_mask}")
 
 
 def get_date(input_str: str) -> str:
