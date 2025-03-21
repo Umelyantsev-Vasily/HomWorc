@@ -23,6 +23,7 @@ def test_filter_by_state(x, expected):
     {"id": 594226727, "state": "", "date": "2018-09-12T21:27:25.241689"}
 ], ValueError),
     ([{}], ValueError)
+    
 ])
 
 def test_invalid_filter_by_state(z, title_expected):

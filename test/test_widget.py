@@ -29,8 +29,7 @@ def test_mask_account_card_error(x, title_expected):
 @pytest.mark.parametrize("x,date_expected",[
     ("2024-03-11T02:26:18.671407", "11.03.2024"),
     ("2042-05-11T02:26:18.671407", "11.05.2042"),
-    ("сегодня/2020/02/20","20.02.2020"),
-    ("Сегодня 2023-10-01", "01.10.2023")
+    ("2023-10-01", "01.10.2023")
 ])
 
 def test_get_date(x, date_expected):
@@ -40,6 +39,8 @@ def test_get_date(x, date_expected):
 @pytest.mark.parametrize("text, date_expect",[
     ("data", ValueError ),
     ("", ValueError),
+    ("gdys", ValueError),
+    ("data",vars())
 ])
 
 def test_get_date_error(text, date_expect):

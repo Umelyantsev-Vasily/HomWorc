@@ -1,3 +1,5 @@
+from idlelib.replace import replace
+
 from src.masks import get_mask_account, get_mask_card_number
 
 
@@ -37,19 +39,17 @@ print(mask_account_card(test))
 def get_date(input_str: str) -> str:
     """Функция, которая преобразует дату и выводит в формате DD.MM.YYYY"""
     data_title = ""
+    if input_str[:10].isalpha():
+        raise ValueError("Введите цыфровое значение ")
+    new_data = input_str[:10]
+    replace_new_data = new_data.replace("-","")
 
-    # Извлечение цифр из входной строки
-    for items in input_str:
-        if items.isdigit():
-            data_title += items
-
-    # Проверка, что у нас есть достаточное количество цифр
-    if len(data_title) < 8:
-        raise ValueError("Input string must contain at least 8 digits for a valid date.")
-
+    # Проверка, что у нас есть достаточное количество цифр, и они не буквы
+    if not replace_new_data.isdigit() or len(replace_new_data) < 8:
+        raise ValueError("Не корректный ввод")
     # Форматирование даты
-    data_new = f"{data_title[6:8]}.{data_title[4:6]}.{data_title[0:4]}"
-    return data_new
+    data_title = f"{replace_new_data[6:]}.{replace_new_data[4:6]}.{replace_new_data[:4]}"
+    return data_title
 
 
 test_3 = "2024-03-11T02:26:18.671407"
