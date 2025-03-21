@@ -35,13 +35,36 @@ print(mask_account_card(test))
 
 
 def get_date(input_str: str) -> str:
-    """Функция которая преобразует дату и выводит"""
+    """Функция, которая преобразует дату и выводит в формате DD.MM.YYYY"""
     data_title = ""
+
+    # Извлечение цифр из входной строки
     for items in input_str:
         if items.isdigit():
             data_title += items
-    return f"{data_title[6:8]}.{data_title[4:6]}.{data_title[0:4]}"
+
+    # Проверка, что у нас есть достаточное количество цифр
+    if len(data_title) < 8:
+        raise ValueError("Input string must contain at least 8 digits for a valid date.")
+
+    # Форматирование даты
+    data_new = f"{data_title[6:8]}.{data_title[4:6]}.{data_title[0:4]}"
+    return data_new
 
 
 test_3 = "2024-03-11T02:26:18.671407"
+test7 = "325326457687970"
 print(get_date(test_3))
+
+
+#def get_date(input_str: str) -> str:
+#    """Функция которая преобразует дату и выводит"""
+#    data_title = ""
+#    new_data = ""
+#    for items in input_str:
+#        if items.isdigit():
+#            data_title += items
+#    new_data = data_title[:8]
+#   if len(new_data) != 8 or not new_data.isdigit():
+#        raise ValueError("НЕправельный ввод")
+#    return f"{data_title[6:8]}.{data_title[4:6]}.{data_title[0:4]}"
