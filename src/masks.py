@@ -1,6 +1,6 @@
 from typing import Union
 
-# card_user = "7000792289606361"
+# card_user = "1234123456785678"
 # account_numbers = "73654108430135874305"
 """ Получаем данные от пользователя"""
 

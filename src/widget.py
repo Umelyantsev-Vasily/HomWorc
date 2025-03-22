@@ -14,18 +14,18 @@ def mask_account_card(number_name: str) -> str:
             title_name += element  # Если этo буквы то добавляем строку во вторую переменную имя
     strip_title_name = title_name.strip()
     if len(title_num) == 16:  # Проверяем колличество цифр в строке
-        title_num = get_mask_card_number(title_num)
+        title_nums = get_mask_card_number(title_num)
     elif len(title_num) == 20:
-        title_num = get_mask_account(title_num)
+        title_nums = get_mask_account(title_num)
     else:
         raise ValueError("Неправильный ввод")
-    title_mask = str(title_name) + str(title_num)
+    title_mask = str(title_name) + str(title_nums)
     return title_mask
 
 
-test = "Visa Platinum 7000792289606361"
-print(mask_account_card(test))
-# test_2 = "Счет 73654108430135874305"
+# test = "Visa Platinum 7000792289606361"
+test_2 = "Счет 73654108430135874305"
+print(mask_account_card(test_2))
 #name, num = mask_account_card(test)
 #if len(num) == 16:  # Проверяем колличество цифр в строке
 #    new_mask = get_mask_card_number(num)
@@ -52,9 +52,9 @@ def get_date(input_str: str) -> str:
     return data_title
 
 
-test_3 = "2024-03-11T02:26:18.671407"
-test7 = "325326457687970"
-print(get_date(test_3))
+# test_3 = "2024-03-11T02:26:18.671407"
+# test7 = "325326457687970"
+# print(get_date(test_3))
 
 
 #def get_date(input_str: str) -> str:

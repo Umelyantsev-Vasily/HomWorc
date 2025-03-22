@@ -10,6 +10,12 @@ import pytest
 def test_mask_account_card(num, expected):
     assert mask_account_card(num) == expected
 
+def test_mask_account_carв_2(mask_get_mask,mask_get_mask_return):
+    assert mask_account_card(mask_get_mask) == mask_get_mask_return
+
+def test_mask_account_carв_3(mask_account_card_account,mask_account_card_account_return):
+    assert mask_account_card(mask_account_card_account) == mask_account_card_account_return
+
 
 @pytest.mark.parametrize("x, title_expected",[
     ("Visa", ValueError ),
@@ -34,6 +40,9 @@ def test_mask_account_card_error(x, title_expected):
 
 def test_get_date(x, date_expected):
     assert get_date(x) == date_expected
+
+def test_get_date_2(get_date_str,get_date_return ):
+    assert get_date(get_date_str) == get_date_return
 
 
 @pytest.mark.parametrize("text, date_expect",[
