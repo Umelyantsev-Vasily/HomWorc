@@ -1,14 +1,15 @@
 import pytest
 
-from src.masks import get_mask_account,get_mask_card_number
+from src.masks import get_mask_account, get_mask_card_number
+
 
 # Фунуция: get_mask_account
-def test_get_mask_account_mask(mask_account_mask, mask_account_mask_return):
-        assert get_mask_account(mask_account_mask) == mask_account_mask_return
+def test_get_mask_account_mask(mask_account_mask: str, mask_account_mask_return: str) -> None:
+    assert get_mask_account(mask_account_mask) == mask_account_mask_return
 
 
 @pytest.mark.parametrize(
-    "x, expected",
+    "nums, expected",
     [
         ("1252156", ValueError),
         ("fgsagh", ValueError),
@@ -17,11 +18,13 @@ def test_get_mask_account_mask(mask_account_mask, mask_account_mask_return):
         ("$%&*(*(**^#?>?<:{}", ValueError),
     ],
 )
-def test_get_mask_account_len(x, expected):
+def test_get_mask_account_len(nums: str, expected: type) -> None:
     with pytest.raises(ValueError):
-        assert get_mask_account(x) == expected
+        assert get_mask_account(nums) == expected
+
 
 # Функция get_mask_card_number
+
 
 @pytest.mark.parametrize(
     "number, expected_result",
@@ -31,19 +34,18 @@ def test_get_mask_account_len(x, expected):
         ("1234123456785678", "1234 23** **** 5678"),
     ],
 )
-def test_get_mask_card_number(number, expected_result):
+def test_get_mask_card_number(number: str, expected_result: str) -> None:
     assert get_mask_card_number(number) == expected_result
 
 
-def test_get_mask_card_number_2(mask_card, mask_card_mask):
+def test_get_mask_card_number_2(mask_card: str, mask_card_mask: str) -> None:
     assert get_mask_card_number(mask_card) == mask_card_mask
-
 
 
 @pytest.mark.parametrize(
     "number, expected",
     [("12345678123456789", ValueError), ("1234", ValueError), ("card", ValueError), ("", ValueError)],
 )
-def test_get_mask_card_error(number, expected):
+def test_get_mask_card_error(number: str, expected: type) -> None:
     with pytest.raises(ValueError):
         assert get_mask_card_number(number) == expected

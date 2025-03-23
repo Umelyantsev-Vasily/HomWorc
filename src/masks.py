@@ -10,7 +10,6 @@ def get_mask_card_number(card_user: Union[str]) -> Union[str]:
     if len(str(card_user)) != 16 or not str(card_user.isdigit()):
         raise ValueError("Не правельный ввод!")
 
-
     string_card = str(card_user)
     return f"{string_card[:4]} {string_card[5:7]}** **** {string_card[-4:]}"
 
