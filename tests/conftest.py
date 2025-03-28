@@ -204,6 +204,18 @@ def dict_filter_by_currency_multiple():
 def missing_currency_field():
     return [{"operationAmount": {"amount": 100}},{"invalid_structure": True}]
 
+@pytest.fixture
+def currency_case_sensitivity():
+    return [
+        {"operationAmount": {"currency": {"code": "usd"}}},  # нижний регистр
+        {"operationAmount": {"currency": {"code": "USD"}}},  # верхний регистр
+        {"operationAmount": {"currency": {"code": "UsD"}}}  # смешанный регистр
+    ]
+
+@pytest.fixture
+def missing_currency_zero():
+    return []
+
 
 @pytest.fixture
 def dict_filter_by_currency_result_1():
