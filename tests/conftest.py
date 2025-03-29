@@ -96,133 +96,159 @@ def by_state_list_2() -> list[dict]:
         {"id": 41428829, "state": "EXECUTED", "date": "2019-07-03T18:35:29.512364"},
         {"id": 939719570, "state": "EXECUTED", "date": "2018-06-30T02:08:58.425572"},
     ]
+
+
 # Тест Функции Генератор: filter_by_currency
 
-@pytest.fixture
-def dict_filter_by_currency():
-    return [
-    {
-        "id": 939719570,
-        "state": "EXECUTED",
-        "date": "2018-06-30T02:08:58.425572",
-        "operationAmount": {
-            "amount": "9824.07",
-            "currency": {
-                "name": "USD",
-                "code": "USD"
-            }
-        },
-        "description": "Перевод организации",
-        "from": "Счет 75106830613657916952",
-        "to": "Счет 11776614605963066702"
-    },
-    {
-        "id": 142264268,
-        "state": "EXECUTED",
-        "date": "2019-04-04T23:20:05.206878",
-        "operationAmount": {
-            "amount": "79114.93",
-            "currency": {
-                "name": "RUB",
-                "code": "RUB"
-            }
-        },
-        "description": "Перевод со счета на счет",
-        "from": "Счет 19708645243227258542",
-        "to": "Счет 75651667383060284188"
-    }]
 
 @pytest.fixture
-def dict_filter_by_currency_not():
+def dict_filter_by_currency() -> list[dict]:
     return [
-    {
-        "id": 939719570,
-        "state": "EXECUTED",
-        "date": "2018-06-30T02:08:58.425572",
-        "operationAmount": {
-            "amount": "9824.07",
-            "currency": {
-                "name": "GBP",
-                "code": "GBP"
-            }
-        },
-        "description": "Перевод организации",
-        "from": "Счет 75106830613657916952",
-        "to": "Счет 11776614605963066702"
-    }]
-
-@pytest.fixture
-def dict_filter_by_currency_multiple():
-    return [
-    {
-        "id": 939719570,
-        "state": "EXECUTED",
-        "date": "2018-06-30T02:08:58.425572",
-        "operationAmount": {
-            "amount": "9824.07",
-            "currency": {
-                "name": "USD",
-                "code": "USD"
-            }
-        },
-        "description": "Перевод организации",
-        "from": "Счет 75106830613657916952",
-        "to": "Счет 11776614605963066702"
-    },
-    {
-        "id": 142264268,
-        "state": "EXECUTED",
-        "date": "2019-04-04T23:20:05.206878",
-        "operationAmount": {
-            "amount": "79114.93",
-            "currency": {
-                "name": "RUB",
-                "code": "RUB"
-            }
-        },
-        "description": "Перевод со счета на счет",
-        "from": "Счет 19708645243227258542",
-        "to": "Счет 75651667383060284188"
-    },
         {
             "id": 939719570,
             "state": "EXECUTED",
             "date": "2018-06-30T02:08:58.425572",
-            "operationAmount": {
-                "amount": "9824.07",
-                "currency": {
-                    "name": "USD",
-                    "code": "USD"
-                }
-            },
+            "operationAmount": {"amount": "9824.07", "currency": {"name": "USD", "code": "USD"}},
             "description": "Перевод организации",
             "from": "Счет 75106830613657916952",
-            "to": "Счет 11776614605963066702"
-        }
+            "to": "Счет 11776614605963066702",
+        },
+        {
+            "id": 142264268,
+            "state": "EXECUTED",
+            "date": "2019-04-04T23:20:05.206878",
+            "operationAmount": {"amount": "79114.93", "currency": {"name": "RUB", "code": "RUB"}},
+            "description": "Перевод со счета на счет",
+            "from": "Счет 19708645243227258542",
+            "to": "Счет 75651667383060284188",
+        },
     ]
-@pytest.fixture
-def missing_currency_field():
-    return [{"operationAmount": {"amount": 100}},{"invalid_structure": True}]
+
 
 @pytest.fixture
-def currency_case_sensitivity():
+def dict_filter_by_currency_not() -> list[dict]:
+    return [
+        {
+            "id": 939719570,
+            "state": "EXECUTED",
+            "date": "2018-06-30T02:08:58.425572",
+            "operationAmount": {"amount": "9824.07", "currency": {"name": "GBP", "code": "GBP"}},
+            "description": "Перевод организации",
+            "from": "Счет 75106830613657916952",
+            "to": "Счет 11776614605963066702",
+        }
+    ]
+
+
+@pytest.fixture
+def dict_filter_by_currency_multiple() -> list[dict]:
+    return [
+        {
+            "id": 939719570,
+            "state": "EXECUTED",
+            "date": "2018-06-30T02:08:58.425572",
+            "operationAmount": {"amount": "9824.07", "currency": {"name": "USD", "code": "USD"}},
+            "description": "Перевод организации",
+            "from": "Счет 75106830613657916952",
+            "to": "Счет 11776614605963066702",
+        },
+        {
+            "id": 142264268,
+            "state": "EXECUTED",
+            "date": "2019-04-04T23:20:05.206878",
+            "operationAmount": {"amount": "79114.93", "currency": {"name": "RUB", "code": "RUB"}},
+            "description": "Перевод со счета на счет",
+            "from": "Счет 19708645243227258542",
+            "to": "Счет 75651667383060284188",
+        },
+        {
+            "id": 939719570,
+            "state": "EXECUTED",
+            "date": "2018-06-30T02:08:58.425572",
+            "operationAmount": {"amount": "9824.07", "currency": {"name": "USD", "code": "USD"}},
+            "description": "Перевод организации",
+            "from": "Счет 75106830613657916952",
+            "to": "Счет 11776614605963066702",
+        },
+    ]
+
+
+@pytest.fixture
+def missing_currency_field() -> list:
+    return [{"operationAmount": {"amount": 100}}, {"invalid_structure": True}]
+
+
+@pytest.fixture
+def currency_case_sensitivity() -> list:
     return [
         {"operationAmount": {"currency": {"code": "usd"}}},  # нижний регистр
         {"operationAmount": {"currency": {"code": "USD"}}},  # верхний регистр
-        {"operationAmount": {"currency": {"code": "UsD"}}}  # смешанный регистр
+        {"operationAmount": {"currency": {"code": "UsD"}}},  # смешанный регистр
     ]
 
+
 @pytest.fixture
-def missing_currency_zero():
+def missing_currency_zero() -> list:
     return []
 
 
 @pytest.fixture
-def dict_filter_by_currency_result_1():
-    return {'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572', 'operationAmount': {'amount': '9824.07', 'currency': {'name': 'USD', 'code': 'USD'}}, 'description': 'Перевод организации', 'from': 'Счет 75106830613657916952', 'to': 'Счет 11776614605963066702'}
-
+def dict_filter_by_currency_result_1() -> dict:
+    return {
+        "id": 939719570,
+        "state": "EXECUTED",
+        "date": "2018-06-30T02:08:58.425572",
+        "operationAmount": {"amount": "9824.07", "currency": {"name": "USD", "code": "USD"}},
+        "description": "Перевод организации",
+        "from": "Счет 75106830613657916952",
+        "to": "Счет 11776614605963066702",
+    }
 
 
 @pytest.fixture
-def currency_arg():
+def currency_arg() -> str:
     return "USD"
+
+
+# Генератор dict_filter_by_currency_multiple
+
+
+@pytest.fixture
+def normal_transactions() -> list[dict]:
+    return [
+        {"description": "Перевод организации", "amount": 100},
+        {"description": "Перевод с карты на карту", "amount": 200},
+        {"description": None},  # Нет описания
+        {"description": "Оплата услуг"},
+    ]
+
+
+@pytest.fixture
+def empty_transactions() -> list:
+    return []
+
+
+@pytest.fixture
+def mixed_transactions() -> list[dict]:
+    return [
+        {"description": "Зарплата"},
+        {"amount": 300},  # Будет пропущен
+        {"description": ""},  # Пустая строка (не будет пропущена)
+        {"description": None},
+    ]  # Будет пропущен
+
+
+@pytest.fixture
+def no_description_transactions() -> list[dict]:
+    return [{"amount": 100}, {"amount": 200}]
+
+
+@pytest.fixture
+def number_title() -> list[str]:
+    return [
+        "0000 0000 0000 0001",
+        "0000 0000 0000 0002",
+        "0000 0000 0000 0003",
+        "0000 0000 0000 0004",
+        "0000 0000 0000 0005",
+    ]
