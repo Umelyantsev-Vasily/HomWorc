@@ -23,6 +23,7 @@ pip install -r requirements.txt
 - masks.py: Содержит функцию для маскировки карт/счетов.
 - get_mask.py: Основной модуль для взаимодействия с пользователем.
 - processing.py: Содержит функции для фильтрации и сортировки данных.
+- generators.py: Содержит Функции генераторы.
 ---
 ### Пример использования:
 *Функция для фильтрации*
@@ -54,23 +55,53 @@ filter_transactions = sort_by_date(transactions)
 print(filter_transactions)
 
 ```
+
+*Функция генерации номера*
+```
+def card_number_generator(start: int = 1, end: int = 9999999999999999) -> Iterator[str]:
+    """
+    Генератор номеров банковских карт в формате XXXX XXXX XXXX XXXX.
+    Генерирует последовательные номера в заданном диапазоне
+    """
+    if not 1 <= start <= end <= 9999999999999999:
+        raise ValueError("Некорректный диапазон номеров карт")
+
+    for number in range(start, end + 1):
+        num_str = f"{number:016d}"  # Форматируем в 16 цифр с ведущими нулями
+        yield f"{num_str[:4]} {num_str[4:8]} {num_str[8:12]} {num_str[12:16]}"
+
+    # Генерация первых 5 номеров карт
+cards = card_number_generator(1, 5)
+for card in cards:
+    print(card)
+    
+# Вывод:
+# 0000 0000 0000 0001
+# 0000 0000 0000 0002
+# 0000 0000 0000 0003
+# 0000 0000 0000 0004
+# 0000 0000 0000 0005
+
+```
 ---
 *Тестовые данные:*
 ```
----------- coverage: platform win32, python 3.13.2-final-0 -----------
 Name                       Stmts   Miss  Cover
 ----------------------------------------------
 src\__init__.py                0      0   100%
+src\generators.py             33      1    97%
 src\masks.py                  12      0   100%
 src\processing.py             28      1    96%
 src\widget.py                 28      0   100%
 tests\__init__.py              0      0   100%
-tests\conftest.py             46      1    98%
+tests\conftest.py             85      4    95%
+tests\test_generators.py      70      0   100%
 tests\test_mask.py            17      0   100%
 tests\test_processing.py      21      0   100%
 tests\test_widget.py          22      0   100%
 ----------------------------------------------
-TOTAL                        174      2    99%
+TOTAL                        316      6    98%
+
 
 ```
 ---
