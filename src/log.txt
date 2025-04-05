@@ -1,0 +1,2 @@
+add ok
+divide, division by zero: <<ZeroDivisionError>> Inputs: (10, 0), {}
