@@ -24,6 +24,7 @@ pip install -r requirements.txt
 - get_mask.py: Основной модуль для взаимодействия с пользователем.
 - processing.py: Содержит функции для фильтрации и сортировки данных.
 - generators.py: Содержит Функции генераторы.
+- decorator.py: Декорирует функцию.
 ---
 ### Пример использования:
 *Функция для фильтрации*
@@ -83,26 +84,43 @@ for card in cards:
 # 0000 0000 0000 0005
 
 ```
+*Функция декоратор*
+```
+# Лог положительный в файл
+@log("log.txt")
+def add(a, b):
+    return a + b
+
+add(2, 3)  # Запишет в operations.log: "add ok"
+
+# Лог в консоль
+@log()  # Без параметра - вывод в консоль
+def multiply(x, y):
+    return x * y
+
+multiply(3, 4)  # Выведет в консоль: "multiply ok"
+
+```
 ---
 *Тестовые данные:*
 ```
 Name                       Stmts   Miss  Cover
 ----------------------------------------------
 src\__init__.py                0      0   100%
+src\decorator.py              44      0   100%
 src\generators.py             33      1    97%
 src\masks.py                  12      0   100%
 src\processing.py             28      1    96%
 src\widget.py                 28      0   100%
 tests\__init__.py              0      0   100%
 tests\conftest.py             85      4    95%
+tests\test_decorator.py       26      0   100%
 tests\test_generators.py      70      0   100%
 tests\test_mask.py            17      0   100%
 tests\test_processing.py      21      0   100%
 tests\test_widget.py          22      0   100%
 ----------------------------------------------
-TOTAL                        316      6    98%
-
-
+TOTAL                        386      6    98%
 ```
 ---
 ## Документация:
