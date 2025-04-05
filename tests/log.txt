@@ -10,3 +10,5 @@
 Функция: divide [2025-04-05 20:50:04] division by zero: <<ZeroDivisionError>> Inputs: (10, 0), {}
 add ok
 divide, division by zero: <<ZeroDivisionError>> Inputs: (10, 0), {}
+add ok
+divide, division by zero: <<ZeroDivisionError>> Inputs: (10, 0), {}
