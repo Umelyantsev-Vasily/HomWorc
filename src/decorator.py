@@ -1,6 +1,11 @@
 from functools import wraps
 
 def log(log_fail=None):
+    """Декоратор
+log , который автоматически логирует начало и конец выполнения функции,
+ а также ее результаты или возникшие ошибки.
+ Если filename задан, логи записываются в указанный файл.
+Если filename не задан, логи выводятся в консоль."""
     def decorator(func):
         @wraps(func)
         def wrapper(*args, **kwargs):
