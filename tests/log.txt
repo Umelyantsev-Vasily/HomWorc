@@ -1,0 +1,14 @@
+[2025-04-05 20:49:11] Функция add выполнена за 0.000 сек
+Аргументы: args=(2, 3), kwargs={}
+Результат: 5
+Конец работы: [2025-04-05 20:49:11]
+Функция: divide [2025-04-05 20:49:11] division by zero: <<ZeroDivisionError>> Inputs: (10, 0), {}
+[2025-04-05 20:50:04] Функция add выполнена за 0.000 сек
+Аргументы: args=(2, 3), kwargs={}
+Результат: 5
+Конец работы: [2025-04-05 20:50:04]
+Функция: divide [2025-04-05 20:50:04] division by zero: <<ZeroDivisionError>> Inputs: (10, 0), {}
+add ok
+divide, division by zero: <<ZeroDivisionError>> Inputs: (10, 0), {}
+add ok
+divide, division by zero: <<ZeroDivisionError>> Inputs: (10, 0), {}
