@@ -25,6 +25,8 @@ pip install -r requirements.txt
 - processing.py: Содержит функции для фильтрации и сортировки данных.
 - generators.py: Содержит Функции генераторы.
 - decorator.py: Декорирует функцию.
+- utils.py: Содержит функцию которая принимает на вход путь до JSON-файла и возвращает список словарей с данными о финансовых транзакциях.
+- external_api.py: Содержит функция которая принимает на вход транзакцию и возвращает сумму транзакции в рублях.
 ---
 ### Пример использования:
 *Функция для фильтрации*
@@ -108,19 +110,24 @@ Name                       Stmts   Miss  Cover
 ----------------------------------------------
 src\__init__.py                0      0   100%
 src\decorator.py              44      0   100%
+src\external_api.py           35      1    97%
 src\generators.py             33      1    97%
 src\masks.py                  12      0   100%
 src\processing.py             28      1    96%
+src\utils.py                  18      0   100%
 src\widget.py                 28      0   100%
 tests\__init__.py              0      0   100%
 tests\conftest.py             85      4    95%
 tests\test_decorator.py       26      0   100%
+tests\test_exempl_api.py     116      2    98%
 tests\test_generators.py      70      0   100%
 tests\test_mask.py            17      0   100%
 tests\test_processing.py      21      0   100%
+tests\test_utils.py           51      1    98%
 tests\test_widget.py          22      0   100%
 ----------------------------------------------
-TOTAL                        386      6    98%
+TOTAL                        606     10    98%
+
 ```
 ---
 ## Документация:
