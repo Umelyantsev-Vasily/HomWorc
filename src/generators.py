@@ -71,6 +71,8 @@ def card_number_generator(start: int = 1, end: int = 9999999999999999) -> Iterat
         yield f"{num_str[:4]} {num_str[4:8]} {num_str[8:12]} {num_str[12:16]}"
 
     # Генерация первых 5 номеров карт
+
+
 cards = card_number_generator(1, 5)
 for card in cards:
     print(card)
