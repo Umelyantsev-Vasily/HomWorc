@@ -1,0 +1,4 @@
+2025-04-12 20:53:41,665 - masks.py - get_mask_card_number - INFO: Получаем данные карты
+2025-04-12 20:53:41,666 - masks.py - get_mask_card_number - INFO: Возращаем маску 1234 23** **** 5678
+2025-04-12 20:53:41,666 - masks.py - get_mask_account - INFO: Получаем данные счета
+2025-04-12 20:53:41,666 - masks.py - get_mask_account - INFO: Возращаем маску счета **4305

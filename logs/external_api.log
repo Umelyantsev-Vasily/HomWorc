@@ -1,0 +1,14 @@
+2025-04-12 23:47:24,027 - external_api.py - get_amount_in_rub - INFO: Извлекаем данные из транзакции
+2025-04-12 23:47:24,027 - external_api.py - get_amount_in_rub - INFO: Проверяем валюту
+2025-04-12 23:47:47,863 - external_api.py - get_amount_in_rub - INFO: Извлекаем данные из транзакции
+2025-04-12 23:47:47,863 - external_api.py - get_amount_in_rub - INFO: Проверяем валюту
+2025-04-12 23:48:27,716 - external_api.py - get_amount_in_rub - INFO: Извлекаем данные из транзакции
+2025-04-12 23:48:27,717 - external_api.py - get_amount_in_rub - INFO: Проверяем валюту
+2025-04-12 23:48:27,717 - external_api.py - get_amount_in_rub - INFO: Формируем параметры запроса {'to': 'RUB', 'from': 'USD', 'amount': 8221.37}
+2025-04-12 23:48:27,717 - external_api.py - get_amount_in_rub - INFO: Отправляем запрос к API
+2025-04-12 23:48:28,547 - external_api.py - get_amount_in_rub - ERROR: Ошибка конвертации валюты: 429 Client Error: Too Many Requests for url: https://api.apilayer.com/exchangerates_data/convert?to=RUB&from=USD&amount=8221.37
+2025-04-13 10:47:19,387 - external_api.py - get_amount_in_rub - INFO: Извлекаем данные из транзакции
+2025-04-13 10:47:19,388 - external_api.py - get_amount_in_rub - INFO: Проверяем валюту
+2025-04-13 10:47:19,388 - external_api.py - get_amount_in_rub - INFO: Формируем параметры запроса {'to': 'RUB', 'from': 'USD', 'amount': 8221.37}
+2025-04-13 10:47:19,388 - external_api.py - get_amount_in_rub - INFO: Отправляем запрос к API
+2025-04-13 10:47:20,441 - external_api.py - get_amount_in_rub - ERROR: Ошибка конвертации валюты: 429 Client Error: Too Many Requests for url: https://api.apilayer.com/exchangerates_data/convert?to=RUB&from=USD&amount=8221.37

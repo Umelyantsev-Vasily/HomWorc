@@ -1,0 +1,8 @@
+2025-04-12 23:47:24,025 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-12 23:47:24,026 - utils.py - load_transactions - INFO: Проверяем, что data — это список
+2025-04-12 23:47:47,862 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-12 23:47:47,863 - utils.py - load_transactions - INFO: Проверяем, что data — это список
+2025-04-12 23:48:27,715 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-12 23:48:27,716 - utils.py - load_transactions - INFO: Проверяем, что data — это список
+2025-04-13 10:47:19,378 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-13 10:47:19,387 - utils.py - load_transactions - INFO: Проверяем, что data — это список
