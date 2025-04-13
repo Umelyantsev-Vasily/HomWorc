@@ -20,13 +20,13 @@ def load_transactions(file_path: str) -> List[Dict]:
     """
     Загружает транзакции из JSON-файла.
     """
-    logger.info(f"Получаем данные из файл")
+    logger.info("Получаем данные из файл")
     try:
         with open(file_path, "r", encoding="utf-8") as file:
             data = json.load(file)
 
             # Проверяем, что data — это список
-            logger.info(f"Проверяем, что data — это список")
+            logger.info("Проверяем, что data — это список")
             if isinstance(data, list):
                 return data
             return []

@@ -47,7 +47,7 @@ def get_amount_in_rub(transaction: dict) -> float:
     """
     try:
         # Извлекаем данные из транзакции
-        logger.info(f"Извлекаем данные из транзакции")
+        logger.info("Извлекаем данные из транзакции")
         operation_amount = transaction.get("operationAmount", {})
         amount = float(operation_amount.get("amount", 0))
         currency = operation_amount.get("currency", {}).get("code", "RUB")
