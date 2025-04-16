@@ -33,7 +33,9 @@ def load_transactions(file_path: str) -> List[Dict]:
 
     except FileNotFoundError as ex:
         logger.error(f"Файл не найден по пути: {file_path}, ошибка: {ex}")
+        print("Файл не найден")
         return []
     except json.JSONDecodeError as ex:
         logger.error(f"Ошибка при декодировании JSON из файла: {file_path}, ошибка: {ex}")
+        print("Некорректный JSON")
         return []

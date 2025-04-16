@@ -27,3 +27,34 @@
 2025-04-16 23:22:45,280 - external_api.py - get_amount_in_rub - INFO: Формируем параметры запроса {'to': 'RUB', 'from': 'USD', 'amount': 8221.37}
 2025-04-16 23:22:45,280 - external_api.py - get_amount_in_rub - INFO: Отправляем запрос к API
 2025-04-16 23:22:45,920 - external_api.py - get_amount_in_rub - ERROR: Ошибка конвертации валюты: 429 Client Error: Too Many Requests for url: https://api.apilayer.com/exchangerates_data/convert?to=RUB&from=USD&amount=8221.37
+2025-04-16 23:55:52,356 - external_api.py - get_amount_in_rub - INFO: Извлекаем данные из транзакции
+2025-04-16 23:55:52,356 - external_api.py - get_amount_in_rub - INFO: Проверяем валюту
+2025-04-16 23:55:52,356 - external_api.py - get_amount_in_rub - INFO: Формируем параметры запроса {'to': 'RUB', 'from': 'USD', 'amount': 8221.37}
+2025-04-16 23:55:52,356 - external_api.py - get_amount_in_rub - INFO: Отправляем запрос к API
+2025-04-16 23:55:55,911 - external_api.py - get_amount_in_rub - ERROR: Ошибка конвертации валюты: HTTPSConnectionPool(host='api.apilayer.com', port=443): Read timed out. (read timeout=3)
+2025-04-16 23:57:30,581 - external_api.py - get_amount_in_rub - INFO: Извлекаем данные из транзакции
+2025-04-16 23:57:30,581 - external_api.py - get_amount_in_rub - INFO: Проверяем валюту
+2025-04-16 23:57:30,581 - external_api.py - get_amount_in_rub - INFO: Формируем параметры запроса {'to': 'RUB', 'from': 'USD', 'amount': 8221.37}
+2025-04-16 23:57:30,581 - external_api.py - get_amount_in_rub - INFO: Отправляем запрос к API
+2025-04-16 23:57:34,025 - external_api.py - get_amount_in_rub - ERROR: Ошибка конвертации валюты: HTTPSConnectionPool(host='api.apilayer.com', port=443): Read timed out. (read timeout=3)
+2025-04-16 23:59:15,174 - external_api.py - get_amount_in_rub - INFO: Извлекаем данные из транзакции
+2025-04-16 23:59:15,175 - external_api.py - get_amount_in_rub - INFO: Проверяем валюту
+2025-04-16 23:59:15,175 - external_api.py - get_amount_in_rub - INFO: Формируем параметры запроса {'to': 'RUB', 'from': 'USD', 'amount': 8221.37}
+2025-04-16 23:59:15,175 - external_api.py - get_amount_in_rub - INFO: Отправляем запрос к API
+2025-04-16 23:59:25,531 - external_api.py - get_amount_in_rub - ERROR: Ошибка конвертации валюты: HTTPSConnectionPool(host='api.apilayer.com', port=443): Read timed out. (read timeout=10)
+2025-04-17 00:17:59,089 - external_api.py - get_amount_in_rub - INFO: Извлекаем данные из транзакции
+2025-04-17 00:17:59,089 - external_api.py - get_amount_in_rub - INFO: Проверяем валюту
+2025-04-17 00:17:59,089 - external_api.py - get_amount_in_rub - INFO: Формируем параметры запроса {'to': 'RUB', 'from': 'EUR', 'amount': 100.0}
+2025-04-17 00:17:59,089 - external_api.py - get_amount_in_rub - INFO: Отправляем запрос к API
+2025-04-17 00:17:59,089 - external_api.py - get_amount_in_rub - ERROR: Ошибка конвертации валюты: API недоступен
+2025-04-17 00:17:59,091 - external_api.py - get_amount_in_rub - INFO: Извлекаем данные из транзакции
+2025-04-17 00:17:59,091 - external_api.py - get_amount_in_rub - ERROR: Ошибка конвертации валюты: could not convert string to float: 'не число'
+2025-04-17 00:17:59,092 - external_api.py - get_amount_in_rub - INFO: Извлекаем данные из транзакции
+2025-04-17 00:17:59,092 - external_api.py - get_amount_in_rub - INFO: Проверяем валюту
+2025-04-17 00:17:59,093 - external_api.py - get_amount_in_rub - INFO: Извлекаем данные из транзакции
+2025-04-17 00:17:59,093 - external_api.py - get_amount_in_rub - INFO: Проверяем валюту
+2025-04-17 00:17:59,095 - external_api.py - get_amount_in_rub - INFO: Извлекаем данные из транзакции
+2025-04-17 00:17:59,095 - external_api.py - get_amount_in_rub - INFO: Проверяем валюту
+2025-04-17 00:17:59,095 - external_api.py - get_amount_in_rub - INFO: Формируем параметры запроса {'to': 'RUB', 'from': 'USD', 'amount': 100.0}
+2025-04-17 00:17:59,095 - external_api.py - get_amount_in_rub - INFO: Отправляем запрос к API
+2025-04-17 00:17:59,095 - external_api.py - get_amount_in_rub - INFO: Получаем и возвращаем результат конвертации

@@ -63,7 +63,7 @@ def get_amount_in_rub(transaction: dict) -> float:
 
         # Отправляем запрос к API
         logger.info("Отправляем запрос к API")
-        response = requests.get(BASE_API_URL, params=params, headers={"apikey": EXCHANGE_RATES_API_KEY}, timeout=3)
+        response = requests.get(BASE_API_URL, params=params, headers={"apikey": EXCHANGE_RATES_API_KEY}, timeout=10)
         response.raise_for_status()  # Проверяем на ошибки HTTP
 
         # Получаем и возвращаем результат конвертации
