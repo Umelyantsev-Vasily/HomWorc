@@ -1,18 +1,10 @@
 import pandas as pd
-from typing import List, Dict
+from typing import List
 
 
 def read_csv_end_xlsx_file(file_path: str, delimiter: str = ";")-> List[dict]:
     """
     Читает данные из CSV или XLSX файла и возвращает их в виде списка словарей.
-
-    Args:
-        file_path (str): Путь к файлу (CSV или XLSX).
-        delimiter (str): Разделитель для CSV (по умолчанию ";").
-
-    Returns:
-        List[Dict[str, Any]]: Список словарей с данными из файла.
-                             В случае ошибки возвращает пустой список.
     """
     if "csv" in file_path:
         try:
