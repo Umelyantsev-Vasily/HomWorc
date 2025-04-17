@@ -58,3 +58,19 @@
 2025-04-17 00:17:59,095 - external_api.py - get_amount_in_rub - INFO: Формируем параметры запроса {'to': 'RUB', 'from': 'USD', 'amount': 100.0}
 2025-04-17 00:17:59,095 - external_api.py - get_amount_in_rub - INFO: Отправляем запрос к API
 2025-04-17 00:17:59,095 - external_api.py - get_amount_in_rub - INFO: Получаем и возвращаем результат конвертации
+2025-04-17 11:18:35,051 - external_api.py - get_amount_in_rub - INFO: Извлекаем данные из транзакции
+2025-04-17 11:18:35,052 - external_api.py - get_amount_in_rub - INFO: Проверяем валюту
+2025-04-17 11:18:35,052 - external_api.py - get_amount_in_rub - INFO: Формируем параметры запроса {'to': 'RUB', 'from': 'EUR', 'amount': 100.0}
+2025-04-17 11:18:35,052 - external_api.py - get_amount_in_rub - INFO: Отправляем запрос к API
+2025-04-17 11:18:35,052 - external_api.py - get_amount_in_rub - ERROR: Ошибка конвертации валюты: API недоступен
+2025-04-17 11:18:35,054 - external_api.py - get_amount_in_rub - INFO: Извлекаем данные из транзакции
+2025-04-17 11:18:35,054 - external_api.py - get_amount_in_rub - ERROR: Ошибка конвертации валюты: could not convert string to float: 'не число'
+2025-04-17 11:18:35,055 - external_api.py - get_amount_in_rub - INFO: Извлекаем данные из транзакции
+2025-04-17 11:18:35,055 - external_api.py - get_amount_in_rub - INFO: Проверяем валюту
+2025-04-17 11:18:35,056 - external_api.py - get_amount_in_rub - INFO: Извлекаем данные из транзакции
+2025-04-17 11:18:35,057 - external_api.py - get_amount_in_rub - INFO: Проверяем валюту
+2025-04-17 11:18:35,058 - external_api.py - get_amount_in_rub - INFO: Извлекаем данные из транзакции
+2025-04-17 11:18:35,058 - external_api.py - get_amount_in_rub - INFO: Проверяем валюту
+2025-04-17 11:18:35,058 - external_api.py - get_amount_in_rub - INFO: Формируем параметры запроса {'to': 'RUB', 'from': 'USD', 'amount': 100.0}
+2025-04-17 11:18:35,059 - external_api.py - get_amount_in_rub - INFO: Отправляем запрос к API
+2025-04-17 11:18:35,059 - external_api.py - get_amount_in_rub - INFO: Получаем и возвращаем результат конвертации

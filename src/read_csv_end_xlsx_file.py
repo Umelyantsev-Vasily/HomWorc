@@ -4,7 +4,7 @@ from typing import List
 
 def read_csv_end_xlsx_file(file_path: str, delimiter: str = ";")-> List[dict]:
     """
-    Читает данные из CSV или XLSX файла и возвращает их в виде списка словарей.
+    Функция которая читает данные из CSV или XLSX файла и возвращает их в виде списка словарей.
     """
     if "csv" in file_path:
         try:
