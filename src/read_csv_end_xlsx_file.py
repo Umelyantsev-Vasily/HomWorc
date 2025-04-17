@@ -1,8 +1,9 @@
-import pandas as pd
 from typing import List
 
+import pandas as pd
 
-def read_csv_end_xlsx_file(file_path: str, delimiter: str = ";")-> List[dict]:
+
+def read_csv_end_xlsx_file(file_path: str, delimiter: str = ";") -> List[dict]:
     """
     Функция которая читает данные из CSV или XLSX файла и возвращает их в виде списка словарей.
     """
