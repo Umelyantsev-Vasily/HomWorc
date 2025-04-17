@@ -1,6 +1,7 @@
+from config import PATH_JSON
 from src.external_api import get_amount_in_rub
 from src.utils import load_transactions
-from config import PATH_JSON
+
 # from config import PATH_TO_EXCEL, PATH_TO_CSV
 # from src.read_csv_end_xlsx_file import read_csv_end_xlsx_file
 

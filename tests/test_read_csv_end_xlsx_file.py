@@ -1,6 +1,8 @@
-import unittest
-import pandas as pd
 import os
+import unittest
+
+import pandas as pd
+
 from src.read_csv_end_xlsx_file import read_csv_end_xlsx_file
 
 
@@ -12,7 +14,7 @@ class TestReadCsvEndXlsxFile(unittest.TestCase):
         cls.test_data = [
             {"id": 1, "name": "Alice", "age": 25},
             {"id": 2, "name": "Bob", "age": 30},
-            {"id": 3, "name": "Charlie", "age": 35}
+            {"id": 3, "name": "Charlie", "age": 35},
         ]
 
         # Создаем тестовый CSV файл
@@ -82,5 +84,3 @@ class TestReadCsvEndXlsxFile(unittest.TestCase):
         result = read_csv_end_xlsx_file(empty_xlsx)
         self.assertEqual(result, [])
         os.remove(empty_xlsx)
-
-

@@ -1,9 +1,12 @@
 import pytest
+
 from src.decorator import log
+
 
 @log()
 def successful_function():
     return "Success"
+
 
 @log()
 def failing_function():
