@@ -39,5 +39,5 @@ def get_mask_account(account_numbers: Union[str]) -> Union[str]:
     return title
 
 
-print(get_mask_card_number(card_user))
-print(get_mask_account(account_numbers))
+# print(get_mask_card_number(card_user))
+# print(get_mask_account(account_numbers))

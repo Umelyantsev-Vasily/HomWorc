@@ -40,3 +40,21 @@
 2025-04-17 11:18:35,455 - utils.py - load_transactions - INFO: Проверяем, что data — это список
 2025-04-17 11:18:35,458 - utils.py - load_transactions - INFO: Получаем данные из файл
 2025-04-17 11:18:35,459 - utils.py - load_transactions - INFO: Проверяем, что data — это список
+2025-04-19 22:26:18,205 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-19 22:26:18,215 - utils.py - load_transactions - INFO: Проверяем, что data — это список
+2025-04-19 22:27:01,289 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-19 22:27:01,290 - utils.py - load_transactions - INFO: Проверяем, что data — это список
+2025-04-19 22:28:03,783 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-19 22:28:03,793 - utils.py - load_transactions - INFO: Проверяем, что data — это список
+2025-04-19 22:28:07,900 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-19 22:28:07,901 - utils.py - load_transactions - INFO: Проверяем, что data — это список
+2025-04-19 22:28:29,615 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-19 22:28:29,616 - utils.py - load_transactions - INFO: Проверяем, что data — это список
+2025-04-19 22:28:33,879 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-19 22:28:33,880 - utils.py - load_transactions - INFO: Проверяем, что data — это список
+2025-04-19 22:43:16,313 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-19 22:43:16,314 - utils.py - load_transactions - INFO: Проверяем, что data — это список
+2025-04-19 22:56:09,081 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-19 22:56:09,083 - utils.py - load_transactions - INFO: Проверяем, что data — это список
+2025-04-19 23:00:26,853 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-19 23:00:26,854 - utils.py - load_transactions - INFO: Проверяем, что data — это список
