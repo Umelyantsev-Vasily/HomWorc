@@ -15,10 +15,10 @@ logger.setLevel(logging.DEBUG)
 
 def get_mask_card_number(card_user: Union[str]) -> Union[str]:
     """Функция которая маскирует номер карты"""
-    logger.info(f"Получаем данные карты")
+    logger.info("Получаем данные карты")
     if len(str(card_user)) != 16 or not str(card_user.isdigit()):
         logger.error(f"Неправельный ввод: {card_user}")
-        raise ValueError(f"Некорректный ввод")
+        raise ValueError("Некорректный ввод")
 
     string_card = str(card_user)
     title = f"{string_card[:4]} {string_card[5:7]}** **** {string_card[-4:]}"
@@ -28,9 +28,9 @@ def get_mask_card_number(card_user: Union[str]) -> Union[str]:
 
 def get_mask_account(account_numbers: Union[str]) -> Union[str]:
     """Функция которая принимает номер счета и возращает маску"""
-    logger.info(f"Получаем данные счета")
+    logger.info("Получаем данные счета")
     if len(str(account_numbers)) != 20 or not str(account_numbers.isdigit()):
-        logger.error(f"Неправельный номер счета!")
+        logger.error("Неправельный номер счета!")
         raise ValueError("Не правильный ввод!")
 
     str_account_numbers = str(account_numbers)

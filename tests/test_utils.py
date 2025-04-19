@@ -1,8 +1,9 @@
-import os
 import json
-import unittest
+import os
 import tempfile
+import unittest
 from unittest.mock import patch
+
 from src.utils import load_transactions
 
 
@@ -16,10 +17,10 @@ class TestLoadTransactions(unittest.TestCase):
         self.nonexistent_path = os.path.join(self.script_dir, "nonexistent.json")
 
         # Создаем тестовые файлы
-        with open(self.valid_json_path, 'w', encoding='utf-8') as f:
+        with open(self.valid_json_path, "w", encoding="utf-8") as f:
             json.dump([{"id": 1}, {"id": 2}], f)
 
-        with open(self.invalid_json_path, 'w', encoding='utf-8') as f:
+        with open(self.invalid_json_path, "w", encoding="utf-8") as f:
             f.write("invalid json")
 
     def tearDown(self):
@@ -36,14 +37,14 @@ class TestLoadTransactions(unittest.TestCase):
 
     def test_load_invalid_json(self):
         """Тест обработки некорректного JSON"""
-        with patch('builtins.print') as mock_print:
+        with patch("builtins.print") as mock_print:
             result = load_transactions(self.invalid_json_path)
             self.assertEqual(result, [])
             mock_print.assert_called_once()
 
     def test_file_not_found(self):
         """Тест обработки отсутствующего файла"""
-        with patch('builtins.print') as mock_print:
+        with patch("builtins.print") as mock_print:
             result = load_transactions(self.nonexistent_path)
             self.assertEqual(result, [])
             mock_print.assert_called_once()
@@ -51,7 +52,7 @@ class TestLoadTransactions(unittest.TestCase):
     def test_non_list_json(self):
         """Тест обработки JSON, который не является списком"""
         non_list_path = os.path.join(self.script_dir, "non_list.json")
-        with open(non_list_path, 'w', encoding='utf-8') as f:
+        with open(non_list_path, "w", encoding="utf-8") as f:
             json.dump({"key": "value"}, f)
 
         result = load_transactions(non_list_path)
@@ -60,15 +61,14 @@ class TestLoadTransactions(unittest.TestCase):
     def test_empty_file(self):
         """Тест обработки пустого файла"""
         empty_path = os.path.join(self.script_dir, "empty.json")
-        with open(empty_path, 'w', encoding='utf-8') as f:
+        with open(empty_path, "w", encoding="utf-8"):
             pass
 
-        with patch('builtins.print') as mock_print:
+        with patch("builtins.print") as mock_print:
             result = load_transactions(empty_path)
             self.assertEqual(result, [])
             mock_print.assert_called_once()
 
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

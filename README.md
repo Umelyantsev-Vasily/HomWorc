@@ -30,6 +30,7 @@ pip install -r requirements.txt
 - external_api.py: Содержит Функцию которая: конвертирует сумму транзакции в рубли.
     Для USD/EUR использует текущий курс через API.
 - utils.py: Содержит Функцию которая: загружает транзакции из JSON-файла.
+- read_csv_end_xlsx_file.py: Функция которая читает данные из CSV или XLSX файла и возвращает их в виде списка словарей.
 
 ---
 ### Пример использования:
@@ -107,30 +108,65 @@ def multiply(x, y):
 multiply(3, 4)  # Выведет в консоль: "multiply ok"
 
 ```
+*Функция которая читает данные из CSV или XLSX*
+```
+def read_csv_end_xlsx_file(file_path: str, delimiter: str = ";")-> List[dict]:
+    """
+    Функция которая читает данные из CSV или XLSX файла и возвращает их в виде списка словарей.
+    """
+    if "csv" in file_path:
+        try:
+            df = pd.read_csv(file_path, delimiter=delimiter)
+            return df.to_dict(orient="records")
+        except FileNotFoundError:
+            print(f"Ошибка: файл {file_path} не найден!")
+            return []
+        except Exception as e:
+            print(f"Ошибка при чтении CSV: {e}")
+            return []
+    elif "xlsx" in file_path:
+        try:
+            df = pd.read_excel(file_path)
+            return df.to_dict(orient="records")
+        except FileNotFoundError:
+            print(f"Ошибка: файл {file_path} не найден!")
+            return []
+        except Exception as e:
+            print(f"Ошибка при чтении XLSX: {e}")
+            return []
+    else:
+        print("Ошибка: неподдерживаемый формат файла (должен быть .csv или .xlsx)")
+        return []
+
+```
+
 ---
 *Тестовые данные:*
 ```
-Name                       Stmts   Miss  Cover
-----------------------------------------------
-src\__init__.py                0      0   100%
-src\decorator.py              44      0   100%
-src\external_api.py           35      1    97%
-src\generators.py             33      1    97%
-src\masks.py                  12      0   100%
-src\processing.py             28      1    96%
-src\utils.py                  18      0   100%
-src\widget.py                 28      0   100%
-tests\__init__.py              0      0   100%
-tests\conftest.py             85      4    95%
-tests\test_decorator.py       26      0   100%
-tests\test_exempl_api.py     116      2    98%
-tests\test_generators.py      70      0   100%
-tests\test_mask.py            17      0   100%
-tests\test_processing.py      21      0   100%
-tests\test_utils.py           51      1    98%
-tests\test_widget.py          22      0   100%
-----------------------------------------------
-TOTAL                        606     10    98%
+Name                                   Stmts   Miss  Cover
+----------------------------------------------------------
+src\__init__.py                            0      0   100%
+src\decorator.py                          44      0   100%
+src\external_api.py                       39      0   100%
+src\generators.py                         33      1    97%
+src\masks.py                              31      0   100%
+src\processing.py                         28      1    96%
+src\read_csv_end_xlsx_file.py             25      6    76%
+src\utils.py                              29      0   100%
+src\widget.py                             28      0   100%
+tests\__init__.py                          0      0   100%
+tests\conftest.py                         85      4    95%
+tests\test_decorator.py                   26      0   100%
+tests\test_exempl_api.py                  37      1    97%
+tests\test_generators.py                  70      0   100%
+tests\test_mask.py                        17      0   100%
+tests\test_processing.py                  21      0   100%
+tests\test_read_csv_end_xlsx_file.py      51      0   100%
+tests\test_utils.py                       51      1    98%
+tests\test_widget.py                      22      0   100%
+----------------------------------------------------------
+TOTAL                                    637     14    98%
+
 
 ```
 ---
@@ -140,6 +176,7 @@ TOTAL                        606     10    98%
 Дополнительную информацию о структуре проекта и API можно найти в [документации](https://github.com/Umelyantsev-Vasily/HomWorc/edit/main/README.md)
 
 Дополнительную нформацию о тесте можно посмотреть: [tests](file:///C:/Users/tanec/PycharmProjects/HomWorc/htmlcov/function_index.html)
+
 ## Лицензия:
 
 Проект распространяется под [лицензией MIT](LICENSE).
