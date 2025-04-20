@@ -9,41 +9,43 @@ from src.widget import mask_account_card, get_date
 def format_transaction(transaction):
     """Форматирует транзакцию для вывода в заданном формате"""
     try:
-        # Получаем отформатированную дату
+        # Основные данные
         date = get_date(transaction.get('date', ''))
-
-        # Получаем описание транзакции
         description = transaction.get('description', 'Описание отсутствует')
 
-        # Обрабатываем отправителя
-        from_account = ''
-        if 'from' in transaction:
-            from_value = str(transaction['from'])
-            from_account = mask_account_card(from_value)
+        # Обработка карт/счетов
+        from_account = mask_account_card(str(transaction['from'])) if 'from' in transaction else ''
+        to_account = mask_account_card(str(transaction.get('to', 'Получатель не указан')))
 
-        # Обрабатываем получателя
-        to_value = str(transaction.get('to', 'Получатель не указан'))
-        to_account = mask_account_card(to_value)
+        # Улучшенная обработка суммы
+        amount_display = "не указана"
+        currency = ""
 
-        # Извлекаем и форматируем сумму
-        operation_amount = transaction.get('operationAmount', {})
-        amount = operation_amount.get('amount', '0') if isinstance(operation_amount, dict) else '0'
-        currency = operation_amount.get('currency', {}).get('code', '') if isinstance(operation_amount, dict) else ''
+        # Проверяем разные варианты структуры суммы
+        if 'amount' in transaction:  # Прямое поле amount
+            amount = transaction['amount']
+            currency = transaction.get('currency', '')
+        else:  # Стандартная структура с operationAmount
+            operation_amount = transaction.get('operationAmount', {})
+            if isinstance(operation_amount, dict):
+                amount = operation_amount.get('amount')
+                currency_data = operation_amount.get('currency', {})
+                currency = currency_data.get('code', '') if isinstance(currency_data, dict) else str(currency_data)
 
-        # Преобразуем сумму к числовому формату
-        try:
-            # Убираем лишние нули после точки, если они есть
-            amount_float = float(amount)
-            formatted_amount = f"{amount_float:,.2f}".replace(',', ' ').replace('.00', '')
-        except (ValueError, TypeError):
-            formatted_amount = amount
+        # Форматируем сумму
+        if 'amount' in locals() and amount not in [None, '']:
+            try:
+                amount_num = float(amount)
+                amount_display = f"{amount_num:,.2f}".replace(',', ' ').replace('.00', '')
+            except (ValueError, TypeError):
+                amount_display = str(amount).strip()
 
-        # Собираем результат в нужном формате
+        # Формируем результат
         result = f"{date} {description}\n"
         if from_account:
             result += f"{from_account} -> "
         result += f"{to_account}\n"
-        result += f"Сумма: {formatted_amount} {currency}"
+        result += f"Сумма: {amount_display} {currency}" if currency else f"Сумма: {amount_display}"
 
         return result
 

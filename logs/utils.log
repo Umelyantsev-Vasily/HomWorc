@@ -74,3 +74,5 @@
 2025-04-20 13:14:24,052 - utils.py - load_transactions - INFO: Проверяем, что data — это список
 2025-04-20 13:20:07,216 - utils.py - load_transactions - INFO: Получаем данные из файл
 2025-04-20 13:20:07,217 - utils.py - load_transactions - INFO: Проверяем, что data — это список
+2025-04-20 18:18:57,328 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-20 18:18:57,348 - utils.py - load_transactions - INFO: Проверяем, что data — это список
