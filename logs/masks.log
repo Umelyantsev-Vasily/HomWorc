@@ -10140,3 +10140,83 @@
 2025-04-20 18:30:01,249 - masks.py - get_mask_card_number - INFO: Возращаем маску 4485 42** **** 2146
 2025-04-20 18:30:01,249 - masks.py - get_mask_account - INFO: Получаем данные счета
 2025-04-20 18:30:01,249 - masks.py - get_mask_account - INFO: Возращаем маску счета **7912
+2025-04-20 18:31:36,507 - masks.py - get_mask_account - INFO: Получаем данные счета
+2025-04-20 18:31:36,507 - masks.py - get_mask_account - INFO: Возращаем маску счета **4305
+2025-04-20 18:31:37,753 - masks.py - get_mask_account - INFO: Получаем данные счета
+2025-04-20 18:31:37,753 - masks.py - get_mask_account - INFO: Возращаем маску счета **4305
+2025-04-20 18:31:37,755 - masks.py - get_mask_account - INFO: Получаем данные счета
+2025-04-20 18:31:37,755 - masks.py - get_mask_account - ERROR: Неправельный номер счета!
+2025-04-20 18:31:37,756 - masks.py - get_mask_account - INFO: Получаем данные счета
+2025-04-20 18:31:37,757 - masks.py - get_mask_account - ERROR: Неправельный номер счета!
+2025-04-20 18:31:37,758 - masks.py - get_mask_account - INFO: Получаем данные счета
+2025-04-20 18:31:37,758 - masks.py - get_mask_account - ERROR: Неправельный номер счета!
+2025-04-20 18:31:37,759 - masks.py - get_mask_account - INFO: Получаем данные счета
+2025-04-20 18:31:37,759 - masks.py - get_mask_account - ERROR: Неправельный номер счета!
+2025-04-20 18:31:37,761 - masks.py - get_mask_account - INFO: Получаем данные счета
+2025-04-20 18:31:37,761 - masks.py - get_mask_account - ERROR: Неправельный номер счета!
+2025-04-20 18:31:37,762 - masks.py - get_mask_card_number - INFO: Получаем данные карты
+2025-04-20 18:31:37,762 - masks.py - get_mask_card_number - INFO: Возращаем маску 1234 67** **** 5678
+2025-04-20 18:31:37,764 - masks.py - get_mask_card_number - INFO: Получаем данные карты
+2025-04-20 18:31:37,764 - masks.py - get_mask_card_number - INFO: Возращаем маску 8765 32** **** 4321
+2025-04-20 18:31:37,765 - masks.py - get_mask_card_number - INFO: Получаем данные карты
+2025-04-20 18:31:37,765 - masks.py - get_mask_card_number - INFO: Возращаем маску 1234 23** **** 5678
+2025-04-20 18:31:37,767 - masks.py - get_mask_card_number - INFO: Получаем данные карты
+2025-04-20 18:31:37,767 - masks.py - get_mask_card_number - INFO: Возращаем маску 1234 23** **** 5678
+2025-04-20 18:31:37,768 - masks.py - get_mask_card_number - INFO: Получаем данные карты
+2025-04-20 18:31:37,768 - masks.py - get_mask_card_number - ERROR: Неправельный ввод: 12345678123456789
+2025-04-20 18:31:37,770 - masks.py - get_mask_card_number - INFO: Получаем данные карты
+2025-04-20 18:31:37,770 - masks.py - get_mask_card_number - ERROR: Неправельный ввод: 1234
+2025-04-20 18:31:37,771 - masks.py - get_mask_card_number - INFO: Получаем данные карты
+2025-04-20 18:31:37,771 - masks.py - get_mask_card_number - ERROR: Неправельный ввод: card
+2025-04-20 18:31:37,773 - masks.py - get_mask_card_number - INFO: Получаем данные карты
+2025-04-20 18:31:37,773 - masks.py - get_mask_card_number - ERROR: Неправельный ввод: 
+2025-04-20 18:31:38,146 - masks.py - get_mask_card_number - INFO: Получаем данные карты
+2025-04-20 18:31:38,146 - masks.py - get_mask_card_number - INFO: Возращаем маску 7000 92** **** 6361
+2025-04-20 18:31:38,147 - masks.py - get_mask_account - INFO: Получаем данные счета
+2025-04-20 18:31:38,147 - masks.py - get_mask_account - INFO: Возращаем маску счета **4305
+2025-04-20 18:31:38,148 - masks.py - get_mask_card_number - INFO: Получаем данные карты
+2025-04-20 18:31:38,148 - masks.py - get_mask_card_number - INFO: Возращаем маску 7000 92** **** 6361
+2025-04-20 18:31:38,150 - masks.py - get_mask_card_number - INFO: Получаем данные карты
+2025-04-20 18:31:38,150 - masks.py - get_mask_card_number - INFO: Возращаем маску 7000 92** **** 6361
+2025-04-20 18:31:38,151 - masks.py - get_mask_account - INFO: Получаем данные счета
+2025-04-20 18:31:38,151 - masks.py - get_mask_account - INFO: Возращаем маску счета **4305
+2025-04-20 18:33:43,270 - masks.py - get_mask_account - INFO: Получаем данные счета
+2025-04-20 18:33:43,270 - masks.py - get_mask_account - INFO: Возращаем маску счета **4305
+2025-04-20 18:33:43,342 - masks.py - get_mask_account - INFO: Получаем данные счета
+2025-04-20 18:33:43,342 - masks.py - get_mask_account - INFO: Возращаем маску счета **4305
+2025-04-20 18:33:43,343 - masks.py - get_mask_account - INFO: Получаем данные счета
+2025-04-20 18:33:43,343 - masks.py - get_mask_account - ERROR: Неправельный номер счета!
+2025-04-20 18:33:43,344 - masks.py - get_mask_account - INFO: Получаем данные счета
+2025-04-20 18:33:43,344 - masks.py - get_mask_account - ERROR: Неправельный номер счета!
+2025-04-20 18:33:43,346 - masks.py - get_mask_account - INFO: Получаем данные счета
+2025-04-20 18:33:43,346 - masks.py - get_mask_account - ERROR: Неправельный номер счета!
+2025-04-20 18:33:43,347 - masks.py - get_mask_account - INFO: Получаем данные счета
+2025-04-20 18:33:43,347 - masks.py - get_mask_account - ERROR: Неправельный номер счета!
+2025-04-20 18:33:43,348 - masks.py - get_mask_account - INFO: Получаем данные счета
+2025-04-20 18:33:43,348 - masks.py - get_mask_account - ERROR: Неправельный номер счета!
+2025-04-20 18:33:43,350 - masks.py - get_mask_card_number - INFO: Получаем данные карты
+2025-04-20 18:33:43,350 - masks.py - get_mask_card_number - INFO: Возращаем маску 1234 67** **** 5678
+2025-04-20 18:33:43,351 - masks.py - get_mask_card_number - INFO: Получаем данные карты
+2025-04-20 18:33:43,351 - masks.py - get_mask_card_number - INFO: Возращаем маску 8765 32** **** 4321
+2025-04-20 18:33:43,352 - masks.py - get_mask_card_number - INFO: Получаем данные карты
+2025-04-20 18:33:43,352 - masks.py - get_mask_card_number - INFO: Возращаем маску 1234 23** **** 5678
+2025-04-20 18:33:43,353 - masks.py - get_mask_card_number - INFO: Получаем данные карты
+2025-04-20 18:33:43,354 - masks.py - get_mask_card_number - INFO: Возращаем маску 1234 23** **** 5678
+2025-04-20 18:33:43,355 - masks.py - get_mask_card_number - INFO: Получаем данные карты
+2025-04-20 18:33:43,355 - masks.py - get_mask_card_number - ERROR: Неправельный ввод: 12345678123456789
+2025-04-20 18:33:43,356 - masks.py - get_mask_card_number - INFO: Получаем данные карты
+2025-04-20 18:33:43,356 - masks.py - get_mask_card_number - ERROR: Неправельный ввод: 1234
+2025-04-20 18:33:43,358 - masks.py - get_mask_card_number - INFO: Получаем данные карты
+2025-04-20 18:33:43,358 - masks.py - get_mask_card_number - ERROR: Неправельный ввод: card
+2025-04-20 18:33:43,359 - masks.py - get_mask_card_number - INFO: Получаем данные карты
+2025-04-20 18:33:43,359 - masks.py - get_mask_card_number - ERROR: Неправельный ввод: 
+2025-04-20 18:33:43,699 - masks.py - get_mask_card_number - INFO: Получаем данные карты
+2025-04-20 18:33:43,699 - masks.py - get_mask_card_number - INFO: Возращаем маску 7000 92** **** 6361
+2025-04-20 18:33:43,700 - masks.py - get_mask_account - INFO: Получаем данные счета
+2025-04-20 18:33:43,700 - masks.py - get_mask_account - INFO: Возращаем маску счета **4305
+2025-04-20 18:33:43,702 - masks.py - get_mask_card_number - INFO: Получаем данные карты
+2025-04-20 18:33:43,702 - masks.py - get_mask_card_number - INFO: Возращаем маску 7000 92** **** 6361
+2025-04-20 18:33:43,703 - masks.py - get_mask_card_number - INFO: Получаем данные карты
+2025-04-20 18:33:43,703 - masks.py - get_mask_card_number - INFO: Возращаем маску 7000 92** **** 6361
+2025-04-20 18:33:43,704 - masks.py - get_mask_account - INFO: Получаем данные счета
+2025-04-20 18:33:43,705 - masks.py - get_mask_account - INFO: Возращаем маску счета **4305

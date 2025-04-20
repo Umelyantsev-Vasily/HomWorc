@@ -31,7 +31,7 @@ pip install -r requirements.txt
     Для USD/EUR использует текущий курс через API.
 - utils.py: Содержит Функцию которая: загружает транзакции из JSON-файла.
 - read_csv_end_xlsx_file.py: Функция которая читает данные из CSV или XLSX файла и возвращает их в виде списка словарей.
-
+- finder_func: Содержит Функцию: которая фильтрует список банковских операций по заданной строке и функцию которая: подсчитывает количество операций в каждой заданной категории
 ---
 ### Пример использования:
 *Функция для фильтрации*
@@ -140,6 +140,34 @@ def read_csv_end_xlsx_file(file_path: str, delimiter: str = ";")-> List[dict]:
 
 ```
 
+*Фильтрует список банковских операций по заданной строке*
+```
+def finder_inf(list_data: List[Dict[str, Any]], input_str: str) -> List[Dict[str, Any]]:
+    """Фильтрует список банковских операций по заданной строке"""
+    try:
+        pattern = re.compile(re.escape(input_str), re.IGNORECASE)  # Экранируем спецсимволы
+        filtered_list = []
+
+        for item in list_data:
+            # Проверяем все строковые значения в словаре
+            for value in item.values():
+                if isinstance(value, str) and pattern.search(value):
+                    filtered_list.append(item)
+                    break
+                elif isinstance(value, dict):
+                    # Рекурсивно проверяем вложенные словари
+                    for sub_value in value.values():
+                        if isinstance(sub_value, str) and pattern.search(sub_value):
+                            filtered_list.append(item)
+                            break
+
+        return filtered_list
+    except Exception as e:
+        print(f"Ошибка при фильтрации: {e}")
+        return []
+        
+```
+
 ---
 *Тестовые данные:*
 ```
@@ -148,16 +176,18 @@ Name                                   Stmts   Miss  Cover
 src\__init__.py                            0      0   100%
 src\decorator.py                          44      0   100%
 src\external_api.py                       39      0   100%
+src\finder_func.py                        30      3    90%
 src\generators.py                         33      1    97%
-src\masks.py                              31      0   100%
-src\processing.py                         28      1    96%
+src\masks.py                              29      0   100%
+src\processing.py                         26      1    96%
 src\read_csv_end_xlsx_file.py             25      6    76%
 src\utils.py                              29      0   100%
 src\widget.py                             28      0   100%
 tests\__init__.py                          0      0   100%
 tests\conftest.py                         85      4    95%
 tests\test_decorator.py                   26      0   100%
-tests\test_exempl_api.py                  37      1    97%
+tests\test_exempl_api.py                  35      0   100%
+tests\test_finder_func.py                 68      1    99%
 tests\test_generators.py                  70      0   100%
 tests\test_mask.py                        17      0   100%
 tests\test_processing.py                  21      0   100%
@@ -165,7 +195,8 @@ tests\test_read_csv_end_xlsx_file.py      51      0   100%
 tests\test_utils.py                       51      1    98%
 tests\test_widget.py                      22      0   100%
 ----------------------------------------------------------
-TOTAL                                    637     14    98%
+TOTAL                                    729     17    98%
+
 
 
 ```

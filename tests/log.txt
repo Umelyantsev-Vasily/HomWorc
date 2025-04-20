@@ -20,3 +20,5 @@ add ok
 divide, division by zero: <<ZeroDivisionError>> Inputs: (10, 0), {}
 add ok
 divide, division by zero: <<ZeroDivisionError>> Inputs: (10, 0), {}
+add ok
+divide, division by zero: <<ZeroDivisionError>> Inputs: (10, 0), {}

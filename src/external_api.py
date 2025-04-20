@@ -50,7 +50,7 @@ def get_amount_in_rub(transaction: dict) -> float:
         logger.info("Извлекаем данные из транзакции")
         operation_amount = transaction.get("operationAmount", {})
         amount = float(operation_amount.get("amount", 0))
-        currency = operation_amount.get("currency", {}).get("code")
+        currency = operation_amount.get("currency", {}).get("code","RUB")
 
         # Если валюта уже в рублях, возвращаем как есть
         logger.info("Проверяем валюту")
