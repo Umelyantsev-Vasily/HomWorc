@@ -1,6 +1,7 @@
 import unittest
-from typing import List, Dict, Any
-from src.finder_func import finder_inf, coun_description
+from typing import Any, Dict, List
+
+from src.finder_func import coun_description, finder_inf
 
 
 class TestFinderInf(unittest.TestCase):
@@ -11,32 +12,20 @@ class TestFinderInf(unittest.TestCase):
                 "id": 1,
                 "description": "Перевод организации",
                 "from": "Maestro 1234567890123456",
-                "operationAmount": {
-                    "amount": "1000.50",
-                    "currency": {
-                        "name": "руб.",
-                        "code": "RUB"
-                    }
-                }
+                "operationAmount": {"amount": "1000.50", "currency": {"name": "руб.", "code": "RUB"}},
             },
             {
                 "id": 2,
                 "description": "Пополнение счета",
                 "to": "Счет 9876543210987654",
-                "operationAmount": {
-                    "amount": "500.00",
-                    "currency": {
-                        "name": "USD",
-                        "code": "USD"
-                    }
-                }
+                "operationAmount": {"amount": "500.00", "currency": {"name": "USD", "code": "USD"}},
             },
             {
                 "id": 3,
                 "description": "Перевод с карты на карту",
                 "from": "Visa 1111222233334444",
-                "to": "MasterCard 5555666677778888"
-            }
+                "to": "MasterCard 5555666677778888",
+            },
         ]
 
     def test_find_by_description(self):
@@ -51,7 +40,6 @@ class TestFinderInf(unittest.TestCase):
         result = finder_inf(self.sample_data, "1234")
         self.assertEqual(len(result), 1)
         self.assertEqual(result[0]["id"], 1)
-
 
     def test_case_insensitive_search(self):
         """Проверка регистронезависимого поиска"""
@@ -80,6 +68,7 @@ class TestFinderInf(unittest.TestCase):
         result = finder_inf([], "Перевод")
         self.assertEqual(len(result), 0)
 
+
 # ////////////////////////////////////////////////////////////
 
 
@@ -101,7 +90,7 @@ class TestCounDescription(unittest.TestCase):
             "Перевод с карты на карту",
             "Перевод со счета на счет",
             "Открытие вклада",
-            "Пополнение счета"
+            "Пополнение счета",
         ]
 
     def test_basic_counting(self):
@@ -112,7 +101,7 @@ class TestCounDescription(unittest.TestCase):
             "Перевод с карты на карту": 1,
             "Перевод со счета на счет": 1,
             "Открытие вклада": 1,
-            "Пополнение счета": 1
+            "Пополнение счета": 1,
         }
         self.assertEqual(result, expected)
 
@@ -120,7 +109,7 @@ class TestCounDescription(unittest.TestCase):
         """Тест регистронезависимости"""
         modified_transactions = [
             {"description": "ПЕРЕВОД ОРГАНИЗАЦИИ", "amount": 100},
-            {"description": "перевод с карты на карту", "amount": 50}
+            {"description": "перевод с карты на карту", "amount": 50},
         ]
         result = coun_description(modified_transactions, self.common_descriptions)
         expected = {
@@ -128,7 +117,7 @@ class TestCounDescription(unittest.TestCase):
             "Перевод с карты на карту": 1,
             "Перевод со счета на счет": 0,
             "Открытие вклада": 0,
-            "Пополнение счета": 0
+            "Пополнение счета": 0,
         }
         self.assertEqual(result, expected)
 
@@ -140,7 +129,7 @@ class TestCounDescription(unittest.TestCase):
             "Перевод с карты на карту": 0,
             "Перевод со счета на счет": 0,
             "Открытие вклада": 0,
-            "Пополнение счета": 0
+            "Пополнение счета": 0,
         }
         self.assertEqual(result, expected)
 
@@ -151,33 +140,27 @@ class TestCounDescription(unittest.TestCase):
 
     def test_missing_description_field(self):
         """Тест с транзакциями без поля description"""
-        transactions = [
-            {"amount": 100},
-            {"note": "Перевод организации"}
-        ]
+        transactions = [{"amount": 100}, {"note": "Перевод организации"}]
         result = coun_description(transactions, self.common_descriptions)
         expected = {
             "Перевод организации": 0,
             "Перевод с карты на карту": 0,
             "Перевод со счета на счет": 0,
             "Открытие вклада": 0,
-            "Пополнение счета": 0
+            "Пополнение счета": 0,
         }
         self.assertEqual(result, expected)
 
     def test_partial_description_match(self):
         """Тест на частичное совпадение описаний"""
-        transactions = [
-            {"description": "Перевод", "amount": 100},
-            {"description": "Организация", "amount": 200}
-        ]
+        transactions = [{"description": "Перевод", "amount": 100}, {"description": "Организация", "amount": 200}]
         result = coun_description(transactions, self.common_descriptions)
         expected = {
             "Перевод организации": 0,
             "Перевод с карты на карту": 0,
             "Перевод со счета на счет": 0,
             "Открытие вклада": 0,
-            "Пополнение счета": 0
+            "Пополнение счета": 0,
         }
         self.assertEqual(result, expected)
 
@@ -188,6 +171,5 @@ class TestCounDescription(unittest.TestCase):
         self.assertEqual(result["Новая категория"], 0)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
-

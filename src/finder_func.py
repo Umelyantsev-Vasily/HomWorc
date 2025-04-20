@@ -1,8 +1,6 @@
-from collections import Counter
-
-from typing import List, Dict, Any
 import re
-
+from collections import Counter
+from typing import Any, Dict, List
 
 
 def finder_inf(list_data: List[Dict[str, Any]], input_str: str) -> List[Dict[str, Any]]:
@@ -30,15 +28,14 @@ def finder_inf(list_data: List[Dict[str, Any]], input_str: str) -> List[Dict[str
         return []
 
 
-def coun_description(transcription_list, list_description):
+def coun_description(transcription_list: list[dict], list_description:str)-> dict[str, int]:
     """Подсчитывает количество операций в каждой заданной категории."""
     count = dict(Counter())
     for list_descr in list_description:
         count[list_descr] = 0
         for transcription in transcription_list:
-            description = transcription.get('description', '').lower()
+            description = transcription.get("description", "").lower()
             if description == list_descr.lower():
                 count[list_descr] += 1
-
 
     return count
