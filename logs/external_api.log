@@ -74,3 +74,38 @@
 2025-04-17 11:18:35,058 - external_api.py - get_amount_in_rub - INFO: Формируем параметры запроса {'to': 'RUB', 'from': 'USD', 'amount': 100.0}
 2025-04-17 11:18:35,059 - external_api.py - get_amount_in_rub - INFO: Отправляем запрос к API
 2025-04-17 11:18:35,059 - external_api.py - get_amount_in_rub - INFO: Получаем и возвращаем результат конвертации
+2025-04-20 18:31:36,525 - external_api.py - get_amount_in_rub - INFO: Извлекаем данные из транзакции
+2025-04-20 18:31:36,526 - external_api.py - get_amount_in_rub - INFO: Проверяем валюту
+2025-04-20 18:31:36,526 - external_api.py - get_amount_in_rub - INFO: Формируем параметры запроса {'to': 'RUB', 'from': 'EUR', 'amount': 100.0}
+2025-04-20 18:31:36,526 - external_api.py - get_amount_in_rub - INFO: Отправляем запрос к API
+2025-04-20 18:31:36,526 - external_api.py - get_amount_in_rub - ERROR: Ошибка конвертации валюты: API недоступен
+2025-04-20 18:31:36,528 - external_api.py - get_amount_in_rub - INFO: Извлекаем данные из транзакции
+2025-04-20 18:31:36,528 - external_api.py - get_amount_in_rub - ERROR: Ошибка конвертации валюты: could not convert string to float: 'не число'
+2025-04-20 18:31:36,529 - external_api.py - get_amount_in_rub - INFO: Извлекаем данные из транзакции
+2025-04-20 18:31:36,529 - external_api.py - get_amount_in_rub - INFO: Проверяем валюту
+2025-04-20 18:31:36,529 - external_api.py - get_amount_in_rub - INFO: Формируем параметры запроса {'to': 'RUB', 'from': None, 'amount': 100.0}
+2025-04-20 18:31:36,529 - external_api.py - get_amount_in_rub - INFO: Отправляем запрос к API
+2025-04-20 18:31:37,599 - external_api.py - get_amount_in_rub - ERROR: Ошибка конвертации валюты: 429 Client Error: Too Many Requests for url: https://api.apilayer.com/exchangerates_data/convert?to=RUB&amount=100.0
+2025-04-20 18:31:37,694 - external_api.py - get_amount_in_rub - INFO: Извлекаем данные из транзакции
+2025-04-20 18:31:37,694 - external_api.py - get_amount_in_rub - INFO: Проверяем валюту
+2025-04-20 18:31:37,696 - external_api.py - get_amount_in_rub - INFO: Извлекаем данные из транзакции
+2025-04-20 18:31:37,697 - external_api.py - get_amount_in_rub - INFO: Проверяем валюту
+2025-04-20 18:31:37,697 - external_api.py - get_amount_in_rub - INFO: Формируем параметры запроса {'to': 'RUB', 'from': 'USD', 'amount': 100.0}
+2025-04-20 18:31:37,697 - external_api.py - get_amount_in_rub - INFO: Отправляем запрос к API
+2025-04-20 18:31:37,697 - external_api.py - get_amount_in_rub - INFO: Получаем и возвращаем результат конвертации
+2025-04-20 18:33:43,289 - external_api.py - get_amount_in_rub - INFO: Извлекаем данные из транзакции
+2025-04-20 18:33:43,289 - external_api.py - get_amount_in_rub - INFO: Проверяем валюту
+2025-04-20 18:33:43,289 - external_api.py - get_amount_in_rub - INFO: Формируем параметры запроса {'to': 'RUB', 'from': 'EUR', 'amount': 100.0}
+2025-04-20 18:33:43,289 - external_api.py - get_amount_in_rub - INFO: Отправляем запрос к API
+2025-04-20 18:33:43,289 - external_api.py - get_amount_in_rub - ERROR: Ошибка конвертации валюты: API недоступен
+2025-04-20 18:33:43,291 - external_api.py - get_amount_in_rub - INFO: Извлекаем данные из транзакции
+2025-04-20 18:33:43,291 - external_api.py - get_amount_in_rub - ERROR: Ошибка конвертации валюты: could not convert string to float: 'не число'
+2025-04-20 18:33:43,292 - external_api.py - get_amount_in_rub - INFO: Извлекаем данные из транзакции
+2025-04-20 18:33:43,292 - external_api.py - get_amount_in_rub - INFO: Проверяем валюту
+2025-04-20 18:33:43,294 - external_api.py - get_amount_in_rub - INFO: Извлекаем данные из транзакции
+2025-04-20 18:33:43,294 - external_api.py - get_amount_in_rub - INFO: Проверяем валюту
+2025-04-20 18:33:43,296 - external_api.py - get_amount_in_rub - INFO: Извлекаем данные из транзакции
+2025-04-20 18:33:43,296 - external_api.py - get_amount_in_rub - INFO: Проверяем валюту
+2025-04-20 18:33:43,296 - external_api.py - get_amount_in_rub - INFO: Формируем параметры запроса {'to': 'RUB', 'from': 'USD', 'amount': 100.0}
+2025-04-20 18:33:43,296 - external_api.py - get_amount_in_rub - INFO: Отправляем запрос к API
+2025-04-20 18:33:43,296 - external_api.py - get_amount_in_rub - INFO: Получаем и возвращаем результат конвертации

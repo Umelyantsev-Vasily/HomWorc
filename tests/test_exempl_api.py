@@ -53,5 +53,5 @@ class TestGetAmountInRub(unittest.TestCase):
         self.assertEqual(result, 100.00)
 
 
-if __name__ == "__main__":
-    unittest.main()
+# if __name__ == "__main__":
+#     unittest.main()

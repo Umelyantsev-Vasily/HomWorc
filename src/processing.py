@@ -55,8 +55,8 @@ test = [
     {"id": "615064591", "state": "CANCELED", "date": "2018-10-14T08:21:33.419441"},
 ]
 
-print(filter_by_state(test))
-print(sort_by_date(test))
+# print(filter_by_state(test))
+# print(sort_by_date(test))
 
 # Делаем проверку второй функции
 # test_2 = [

@@ -40,3 +40,59 @@
 2025-04-17 11:18:35,455 - utils.py - load_transactions - INFO: Проверяем, что data — это список
 2025-04-17 11:18:35,458 - utils.py - load_transactions - INFO: Получаем данные из файл
 2025-04-17 11:18:35,459 - utils.py - load_transactions - INFO: Проверяем, что data — это список
+2025-04-19 22:26:18,205 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-19 22:26:18,215 - utils.py - load_transactions - INFO: Проверяем, что data — это список
+2025-04-19 22:27:01,289 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-19 22:27:01,290 - utils.py - load_transactions - INFO: Проверяем, что data — это список
+2025-04-19 22:28:03,783 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-19 22:28:03,793 - utils.py - load_transactions - INFO: Проверяем, что data — это список
+2025-04-19 22:28:07,900 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-19 22:28:07,901 - utils.py - load_transactions - INFO: Проверяем, что data — это список
+2025-04-19 22:28:29,615 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-19 22:28:29,616 - utils.py - load_transactions - INFO: Проверяем, что data — это список
+2025-04-19 22:28:33,879 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-19 22:28:33,880 - utils.py - load_transactions - INFO: Проверяем, что data — это список
+2025-04-19 22:43:16,313 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-19 22:43:16,314 - utils.py - load_transactions - INFO: Проверяем, что data — это список
+2025-04-19 22:56:09,081 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-19 22:56:09,083 - utils.py - load_transactions - INFO: Проверяем, что data — это список
+2025-04-19 23:00:26,853 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-19 23:00:26,854 - utils.py - load_transactions - INFO: Проверяем, что data — это список
+2025-04-20 10:17:16,083 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-20 10:17:16,087 - utils.py - load_transactions - INFO: Проверяем, что data — это список
+2025-04-20 10:50:00,207 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-20 10:50:00,216 - utils.py - load_transactions - INFO: Проверяем, что data — это список
+2025-04-20 11:15:41,250 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-20 11:15:41,251 - utils.py - load_transactions - INFO: Проверяем, что data — это список
+2025-04-20 11:22:25,170 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-20 11:22:25,170 - utils.py - load_transactions - INFO: Проверяем, что data — это список
+2025-04-20 13:12:30,707 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-20 13:12:30,708 - utils.py - load_transactions - INFO: Проверяем, что data — это список
+2025-04-20 13:13:04,086 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-20 13:13:04,086 - utils.py - load_transactions - INFO: Проверяем, что data — это список
+2025-04-20 13:14:24,051 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-20 13:14:24,052 - utils.py - load_transactions - INFO: Проверяем, что data — это список
+2025-04-20 13:20:07,216 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-20 13:20:07,217 - utils.py - load_transactions - INFO: Проверяем, что data — это список
+2025-04-20 18:18:57,328 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-20 18:18:57,348 - utils.py - load_transactions - INFO: Проверяем, что data — это список
+2025-04-20 18:31:38,113 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-20 18:31:38,114 - utils.py - load_transactions - ERROR: Ошибка при декодировании JSON из файла: C:\Users\tanec\AppData\Local\Temp\tmp2z0by_ai\empty.json, ошибка: Expecting value: line 1 column 1 (char 0)
+2025-04-20 18:31:38,117 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-20 18:31:38,117 - utils.py - load_transactions - ERROR: Файл не найден по пути: C:\Users\tanec\AppData\Local\Temp\tmpkvg7lt_8\nonexistent.json, ошибка: [Errno 2] No such file or directory: 'C:\\Users\\tanec\\AppData\\Local\\Temp\\tmpkvg7lt_8\\nonexistent.json'
+2025-04-20 18:31:38,120 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-20 18:31:38,125 - utils.py - load_transactions - ERROR: Ошибка при декодировании JSON из файла: C:\Users\tanec\AppData\Local\Temp\tmp6tus49rq\invalid.json, ошибка: Expecting value: line 1 column 1 (char 0)
+2025-04-20 18:31:38,128 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-20 18:31:38,133 - utils.py - load_transactions - INFO: Проверяем, что data — это список
+2025-04-20 18:31:38,137 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-20 18:31:38,142 - utils.py - load_transactions - INFO: Проверяем, что data — это список
+2025-04-20 18:33:43,681 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-20 18:33:43,681 - utils.py - load_transactions - ERROR: Ошибка при декодировании JSON из файла: C:\Users\tanec\AppData\Local\Temp\tmp3gvw6khu\empty.json, ошибка: Expecting value: line 1 column 1 (char 0)
+2025-04-20 18:33:43,684 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-20 18:33:43,684 - utils.py - load_transactions - ERROR: Файл не найден по пути: C:\Users\tanec\AppData\Local\Temp\tmpj3rnoytj\nonexistent.json, ошибка: [Errno 2] No such file or directory: 'C:\\Users\\tanec\\AppData\\Local\\Temp\\tmpj3rnoytj\\nonexistent.json'
+2025-04-20 18:33:43,687 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-20 18:33:43,688 - utils.py - load_transactions - ERROR: Ошибка при декодировании JSON из файла: C:\Users\tanec\AppData\Local\Temp\tmp8dcvp_tr\invalid.json, ошибка: Expecting value: line 1 column 1 (char 0)
+2025-04-20 18:33:43,691 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-20 18:33:43,692 - utils.py - load_transactions - INFO: Проверяем, что data — это список
+2025-04-20 18:33:43,695 - utils.py - load_transactions - INFO: Получаем данные из файл
+2025-04-20 18:33:43,696 - utils.py - load_transactions - INFO: Проверяем, что data — это список
